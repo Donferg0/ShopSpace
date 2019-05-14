@@ -1,0 +1,15 @@
+body {
+  font: 100% "Montserrat", sans-serif;
+  background-color: #e6fc85; }
+
+.card {
+  margin: 0 auto;
+  float: none;
+  margin-top: 10px; }
+
+.card-header {
+  font: 110% "Montserrat", sans-serif;
+  font-weight: 700; }
+
+.btn {
+  font-weight: 700; }
