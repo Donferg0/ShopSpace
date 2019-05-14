@@ -1,5 +1,6 @@
-DROP DATABASE IF EXISTS exampledb;
-CREATE DATABASE exampledb;
+DROP DATABASE IF EXISTS productsdb;
+CREATE DATABASE productsdb;
 
-DROP DATABASE IF EXISTS testdb;
-CREATE DATABASE testdb;
+USE DATABASE productsdb;
+
+CREATE TABLE  products
