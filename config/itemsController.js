@@ -2,43 +2,51 @@ var express = require("express");
 
 var router = express.Router();
 
-// Import the model (items.js) to use its database functions.
+// Import the model (peer2peer.js) to use its database functions.
 var peer = require("../models/items.js");
 
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function (req, res) {
     items.all(function (data) {
         var hbsObject = {
-            peer2peer: data
+            items: data
         };
         console.log(hbsObject);
         res.render("index", hbsObject);
     });
 });
+// Add a new item
+router.post("/api/items", function (req, res) {
+    var condition = "id " + req.params.id;
+    console.log("Condition", condition);
 
-router.post("/", function (req, res) {
-    items.create(["price", "name", "image", "quantity", "category"
-    ], [
-            req.body.price, req.body.name, req.body.image, req.body.quantity, req.body.category],
-        function (result) {
+    item.create({
+        price: req.body.price,
+        name: req.body.name,
+        image= req.body.quantity,
+        category= req.body.category
+    }),
+
+        function () {
             // Send back the name of the new item
-            res.redirect("/");
-        });
+            res.redirect("/items");
+        };
 });
 
-router.put("/:name", function (req, res) {
-    var condition = "name = " + req.params.name;
+// Update the database
+router.put("/api/items/:id", function (req, res) {
+    var condition = "id = " + req.params.name;
 
-    console.log("condition", condition);
+    // console.log("condition", condition);
 
-    peer2peer.update(
+    item.update(
         {
             name: req.body.name,
             price: req.body.price,
             quantity: req.body.quantity,
             image: req.body.image,
             category: req.body.category,
-            
+
         }, function () {
             if (result.changedRows == 0) {
                 // If no rows were changed, then the ID must not exist, so 404
@@ -50,10 +58,9 @@ router.put("/:name", function (req, res) {
         });
 });
 
-router.delete("/:name", function (req, res) {
-    var condition = "name = " + req.params.name;
-
-    items.delete(condition, function (result) {
+router.delete("/api/items/:id", function (req, res) {
+    var condition = "id = " + req.params.id;
+    item.delete(condition, function () {
         if (result.affectedRows == 0) {
             // If no rows were changed, then the ID must not exist, so 404
             return res.status(404).end();
