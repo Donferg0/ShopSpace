@@ -1,0 +1,22 @@
+$font-stack:    'Montserrat', sans-serif;
+$primary-color: rgb(230, 252, 133);
+
+body {
+    font: 100% $font-stack;
+    background-color: $primary-color;
+  }
+
+.card {
+    margin: 0 auto; 
+    float: none; 
+    margin-top: 10px;
+}
+
+.card-header {
+    font: 110% $font-stack;
+    font-weight: 700;
+}
+
+.btn {
+    font-weight: 700;
+}
