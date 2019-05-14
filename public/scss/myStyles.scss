@@ -20,3 +20,32 @@ body {
 .btn {
     font-weight: 700;
 }
+
+
+
+
+
+// index Styles
+
+
+h2 {
+    font: 400 100px/1.2 'Merienda One', Helvetica, sans-serif;
+    color: rgba(0,0,0,0.7);
+    text-shadow: 3px 3px 3px #fff;
+    text-align: center;
+  }
+  .navbar
+  {
+      border-bottom:2px solid rgb(0,0,0);padding-bottom:10px;
+    }
+    #navbarNav {
+      list-style: none;
+      text-align: center;
+   }
+   
+   .nav ul li {
+      display: inline-block;
+   }
+.navbar-nav{
+  margin:auto;
+}
