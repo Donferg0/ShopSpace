@@ -18,13 +18,13 @@ var API = {
   },
   getExamples: function() {
     return $.ajax({
-      url: "api/examples",
+      url: "api/items",
       type: "GET"
     });
   },
-  deleteExample: function(id) {
+  deletePost: function(name) {
     return $.ajax({
-      url: "api/examples/" + id,
+      url: "api/items/" + name,
       type: "DELETE"
     });
   }

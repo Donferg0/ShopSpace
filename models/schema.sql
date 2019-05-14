@@ -1,5 +1,5 @@
-DROP DATABASE IF EXISTS exampledb;
-CREATE DATABASE exampledb;
+DROP DATABASE IF EXISTS peer2peer_db;
 
-DROP DATABASE IF EXISTS testdb;
-CREATE DATABASE testdb;
+CREATE DATABASE peer2peer_db;
+
+USE DATABASE peer2peer_db;
