@@ -8,17 +8,17 @@ module.exports = function(sequelize, DataTypes) {
   });
 
 
-  items.associate = function(models) {
-    // We're saying that a item should belong to a user
-    // an item can't be created without a user due to the foreign key constraint
-    items.belongsTo(models.users, {
-      foreignKey: {
-        allowNull: false        
-      }
-    });
-      items.findAll({ include: [{ users: true }]})
+  // items.associate = function(models) {
+  //   // We're saying that a item should belong to a user
+  //   // an item can't be created without a user due to the foreign key constraint
+  //   items.belongsTo(models.users, {
+  //     foreignKey: {
+  //       allowNull: false        
+  //     }
+  //   });
+  //     items.findAll({ include: [{ users: true }]})
   
-  };
+  // };
 
   return items;
 };

@@ -23,12 +23,12 @@ module.exports = function (app) {
   });
 
 
-  // Create a new example
-  app.post("/api/items", function (req, res) {
-    db.items.create(req.body).then(function (dbitems) {
-      res.json(dbitems);
-    });
-  });
+  // // Create a new example
+  // app.post("/api/items", function (req, res) {
+  //   db.items.create(req.body).then(function (dbitems) {
+  //     res.json(dbitems);
+  //   });
+  // });
 
   // // Create a new item
   // app.post("/api/items", function (req, res) {
