@@ -6,8 +6,5 @@ module.exports = function(sequelize, DataTypes) {
     category: DataTypes.TEXT
   });
 
-
-  
-
   return items;
 };
