@@ -102,4 +102,4 @@ module.exports = function(app) {
 //     .then(function (dbitem) {
 //       res.json(dbitem);
 //     })
-// });
+};
