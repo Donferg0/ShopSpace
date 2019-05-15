@@ -1,32 +1,32 @@
 var db = require("../models");
 
-module.exports = function (app) {
-  // Get all items
-  app.get("/api/items", function (req, res) {
-    db.item.findAll({}).then(function (dbitems) {
-      res.json(dbitems);
+module.exports = function(app) {
+  // Get all examples
+  app.get("/api/examples", function(req, res) {
+    db.Example.findAll({}).then(function(dbExamples) {
+      res.json(dbExamples);
     });
   });
 
-
-  //  // Get route for returning items of a specific category
-   app.get("/api/items/category/:category", function (req, res) {
+  // Get route for returning items of a specific category
+  app.get("/api/items/category/:category", function(req, res) {
     // Add sequelize code to find all posts where the category is equal to req.params.category,
     // return the result to the user with res.json
-    db.item.findAll({
-      where: {
-        category: req.params.category,
-      }
-    }).then(function (dbitems) {
-      res.json(dbitems);
-    });
+    db.items
+      .findAll({
+        where: {
+          category: req.params.category
+        }
+      })
+      .then(function(dbitem) {
+        res.json(dbitem);
+      });
   });
 
-
   // Create a new example
-  app.post("/api/items", function (req, res) {
-    db.items.create(req.body).then(function (dbitems) {
-      res.json(dbitems);
+  app.post("/api/examples", function(req, res) {
+    db.Example.create(req.body).then(function(dbExample) {
+      res.json(dbExample);
     });
   });
 
@@ -47,47 +47,58 @@ module.exports = function (app) {
   //     })
 
   // // Get route for retrieving a single item
-  app.get("/api/items/:id", function (req, res) {
-    // Add sequelize code to find a single post where the id is equal to req.params.id,
-    // return the result to the user with res.json
-    db.item.findOne({
-      where: {
-        id: req.params.id,
-      }
-    }).then(function (dbitems) {
-      res.json(dbitems);
+  // app.get("/api/items/:id", function (req, res) {
+  //   // Add sequelize code to find a single post where the id is equal to req.params.id,
+  //   // return the result to the user with res.json
+  //   db.item.findOne({
+  //     where: {
+  //       id: req.params.id,
+  //     }
+  //   }).then(function (dbitem) {
+  //     res.json(dbitem);
+  //   });
+  // });
+
+  // Delete an example by id
+  app.delete("/api/examples/:id", function(req, res) {
+    db.Example.destroy({ where: { id: req.params.id } }).then(function(
+      dbExample
+    ) {
+      res.json(dbExample);
     });
   });
 
-
 // // DELETE route for deleting items
-app.delete("/api/items/:id", function (req, res) {
-  // Add sequelize code to delete a post where the id is equal to req.params.id, 
-  // then return the result to the user using res.json
-  db.item.destroy({
-    where: {
-      id: req.params.id
-    }
-  }).then(function (dbitems) {
-    res.json(dbitems);
-  });
-});
-
+// app.delete("/api/items/:id", function (req, res) {
+//   // Add sequelize code to delete a post where the id is equal to req.params.id,
+//   // then return the result to the user using res.json
+//   db.item.destroy({
+//     where: {
+//       id: req.params.id
+//     }
+//   }).then(function (dbitem) {
+//     res.json(dbitem);
+//   });
+// });
 
 // // PUT route for updating posts
-app.put("/api/items", function (req, res) {
-  // Add code here to update a post using the values in req.body, where the id is equal to
-  // req.body.id and return the result to the user using res.json
-  db.item.updateOne(
-    req.body,
-{
-    where: {
-      id: req.body.id
-    }
+// app.put("/api/items", function (req, res) {
+//   // Add code here to update a post using the values in req.body, where the id is equal to
+//   // req.body.id and return the result to the user using res.json
+//   db.item.updateOne({
 
-  })
-    .then(function (dbitems) {
-      res.json(dbitems);
-    })
-});
-};
+//     name: req.body.name,
+//     price: req.body.price,
+//     image: req.body.image,
+//     quantity: req.body.quantity,
+//     category: req.body.category,
+
+//     where: {
+//       id: req.body.id
+//     }
+
+//   })
+//     .then(function (dbitem) {
+//       res.json(dbitem);
+//     })
+// });
