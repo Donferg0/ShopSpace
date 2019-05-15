@@ -1,0 +1,35 @@
+body {
+  font: 100% "Montserrat", sans-serif;
+  background-color: #e6fc85; }
+
+.card {
+  margin: 0 auto;
+  float: none;
+  margin-top: 10px; }
+
+.card-header {
+  font: 110% "Montserrat", sans-serif;
+  font-weight: 700; }
+
+.btn {
+  font-weight: 700; }
+
+h2 {
+  font: 400 100px/1.2 'Merienda One', Helvetica, sans-serif;
+  color: rgba(0, 0, 0, 0.7);
+  text-shadow: 3px 3px 3px #fff;
+  text-align: center; }
+
+.navbar {
+  border-bottom: 2px solid black;
+  padding-bottom: 10px; }
+
+#navbarNav {
+  list-style: none;
+  text-align: center; }
+
+.nav ul li {
+  display: inline-block; }
+
+.navbar-nav {
+  margin: auto; }

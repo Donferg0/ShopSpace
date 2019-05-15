@@ -6,33 +6,33 @@ var $exampleList = $("#example-list");
 
 // The API object contains methods for each kind of request we'll make
 var API = {
-  saveExample: function(example) {
+  saveItem: function(example) {
     return $.ajax({
       headers: {
         "Content-Type": "application/json"
       },
       type: "POST",
-      url: "api/examples",
+      url: "api/items",
       data: JSON.stringify(example)
     });
   },
-  getExamples: function() {
+  getItem: function() {
     return $.ajax({
       url: "api/items",
       type: "GET"
     });
   },
-  deletePost: function(name) {
+  deleteItem: function(id) {
     return $.ajax({
-      url: "api/items/" + name,
+      url: "api/items/" + id,
       type: "DELETE"
     });
   }
 };
 
 // refreshExamples gets new examples from the db and repopulates the list
-var refreshExamples = function() {
-  API.getExamples().then(function(data) {
+var refreshItems = function() {
+  API.getItem().then(function(data) {
     var $examples = data.map(function(example) {
       var $a = $("<a>")
         .text(example.text)
@@ -74,8 +74,8 @@ var handleFormSubmit = function(event) {
     return;
   }
 
-  API.saveExample(example).then(function() {
-    refreshExamples();
+  API.saveItem(example).then(function() {
+    refreshItems();
   });
 
   $exampleText.val("");
@@ -89,8 +89,8 @@ var handleDeleteBtnClick = function() {
     .parent()
     .attr("data-id");
 
-  API.deleteExample(idToDelete).then(function() {
-    refreshExamples();
+  API.deleteItem(idToDelete).then(function() {
+    refreshItems();
   });
 };
 
