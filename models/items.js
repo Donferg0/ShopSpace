@@ -14,8 +14,7 @@ module.exports = function(sequelize, DataTypes) {
         allowNull: false
       }
     });
-    items.findAll({ include: [{ users: true }] })
-
+    // items.findAll({ include: [{ users: true }] })
   };
 
   return items;

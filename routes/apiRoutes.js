@@ -20,6 +20,7 @@ module.exports = function(app) {
       })
       .then(function(dbitem) {
         res.json(dbitem);
+        console.log(dbitem)
       });
   });
 
@@ -101,4 +102,4 @@ module.exports = function(app) {
 //     .then(function (dbitem) {
 //       res.json(dbitem);
 //     })
-// });
+};
