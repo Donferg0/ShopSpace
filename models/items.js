@@ -6,5 +6,15 @@ module.exports = function(sequelize, DataTypes) {
     category: DataTypes.TEXT
   });
 
+  // items.associate = function(models) {
+  //   // We're saying that a item should belong to a user
+  //   // an item can't be created without a user due to the foreign key constraint
+  //   items.belongsTo(models.users, {
+  //     foreignKey: {
+  //       allowNull: false
+  //     }
+  //   });
+  // };
+
   return items;
 };
