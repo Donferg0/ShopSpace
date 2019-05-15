@@ -25,8 +25,7 @@ module.exports = function(sequelize, DataTypes) {
         allowNull: false
       }
     });
-    items.findAll({ include: [{ users: true }] })
-
+    // items.findAll({ include: [{ users: true }] })
   };
 >>>>>>> 6250edb273ec0e862e3e1a914d6340b9cb334fb7
 
