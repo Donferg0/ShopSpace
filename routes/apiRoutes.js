@@ -1,32 +1,31 @@
 var db = require("../models");
 
-module.exports = function (app) {
+module.exports = function(app) {
   // Get all examples
-  app.get("/api/examples", function (req, res) {
-    db.Example.findAll({}).then(function (dbExamples) {
+  app.get("/api/examples", function(req, res) {
+    db.Example.findAll({}).then(function(dbExamples) {
       res.json(dbExamples);
     });
   });
 
-
-  //  // Get route for returning items of a specific category
-  //  app.get("/api/items/category/:category", function (req, res) {
-  //   // Add sequelize code to find all posts where the category is equal to req.params.category,
-  //   // return the result to the user with res.json
-  //   db.Post.findAll({
-  //     where: {
-  //       category: req.params.category,
-  //     }
-  //   }).then(function (dbitem) {
-  //     res.json(dbitem);
-  //   });
-  // });
-
-
+  // Get route for returning items of a specific category
+  app.get("/api/items/category/:category", function(req, res) {
+    // Add sequelize code to find all posts where the category is equal to req.params.category,
+    // return the result to the user with res.json
+    db.items
+      .findAll({
+        where: {
+          category: req.params.category
+        }
+      })
+      .then(function(dbitem) {
+        res.json(dbitem);
+      });
+  });
 
   // Create a new example
-  app.post("/api/examples", function (req, res) {
-    db.Example.create(req.body).then(function (dbExample) {
+  app.post("/api/examples", function(req, res) {
+    db.Example.create(req.body).then(function(dbExample) {
       res.json(dbExample);
     });
   });
@@ -47,7 +46,6 @@ module.exports = function (app) {
   //       res.json(dbitem);
   //     })
 
-
   // // Get route for retrieving a single item
   // app.get("/api/items/:id", function (req, res) {
   //   // Add sequelize code to find a single post where the id is equal to req.params.id,
@@ -61,20 +59,19 @@ module.exports = function (app) {
   //   });
   // });
 
-
-
   // Delete an example by id
-  app.delete("/api/examples/:id", function (req, res) {
-    db.Example.destroy({ where: { id: req.params.id } }).then(function (dbExample) {
+  app.delete("/api/examples/:id", function(req, res) {
+    db.Example.destroy({ where: { id: req.params.id } }).then(function(
+      dbExample
+    ) {
       res.json(dbExample);
     });
   });
 };
 
-
 // // DELETE route for deleting items
 // app.delete("/api/items/:id", function (req, res) {
-//   // Add sequelize code to delete a post where the id is equal to req.params.id, 
+//   // Add sequelize code to delete a post where the id is equal to req.params.id,
 //   // then return the result to the user using res.json
 //   db.item.destroy({
 //     where: {
@@ -84,7 +81,6 @@ module.exports = function (app) {
 //     res.json(dbitem);
 //   });
 // });
-
 
 // // PUT route for updating posts
 // app.put("/api/items", function (req, res) {
