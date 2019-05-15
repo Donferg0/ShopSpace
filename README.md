@@ -14,10 +14,12 @@ The app is node based with the integration of many others packages:
 
 * a new library 
 
+* SASS  and Bootstrap for styling
+
 * Be deployed using Heroku (with Data);
 
 
-## HOW THAT IS WORK
+## HOW IT WORKS
 
 On the home page, users will need to sign in before posting or buying any article. Have they decided not to sign in they can still tour the site and contemplate the beautiful and unique items we have.
 
