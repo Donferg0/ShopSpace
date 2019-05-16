@@ -2,9 +2,10 @@ var db = require("../models");
 
 module.exports = function(app) {
   // Get all examples
-  app.get("/items", function(req, res) {
-    db.item.findAll({}).then(function(dbitems) {
-      res.json(dbitems);
+  app.get("/api/items", function(req, res) {
+    db.items.findAll({}).then(function(dbitems) {
+      // res.json(dbitems);
+      res.render("products", dbitems);
     });
   });
 
@@ -56,8 +57,7 @@ module.exports = function(app) {
         }
       })
       .then(function(dbitem) {
-        res.json(dbitem);
-        // console.log(dbitem)
+        res.render("products", dbitem);
       });
   });
 

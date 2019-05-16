@@ -28,7 +28,6 @@ $(document).ready(function() {
       .parent()
       .attr("data-id");
 
-    API.buyItem(idToBuy).then(function(){;
-    });
+    API.buyItem(idToBuy).then(function() {});
+  };
 });
-

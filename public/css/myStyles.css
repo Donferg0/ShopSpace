@@ -6,7 +6,7 @@ h3 {
 
 .navbar {
   border-bottom: 2px solid black;
-  padding-bottom: 10px;
+  height: 20%;
   background-color: white; }
 
 .navbar-nav {
@@ -19,7 +19,7 @@ h3 {
   width: 30%; }
 
 .login {
-  opacity: 0.8;
+  opacity: 9.5;
   width: 320px;
   height: 420px;
   background: rgba(0, 0, 0, 0.5);
@@ -48,8 +48,8 @@ h3 {
   outline: none;
   height: 40px; }
 
-.container {
-  opacity: 0.8;
+.con1 {
+  opacity: 9.5;
   width: 400px;
   height: 700px;
   background: rgba(0, 0, 0, 0.5);
@@ -80,7 +80,7 @@ h3 {
   font-family: 'Lobster', cursive;
   text-align: center; }
 
-.index-container {
+.index-container, .image-col {
   min-height: 100vh;
   background-color: #caebee; }
 
@@ -94,6 +94,14 @@ h3 {
 
 .bk-signup {
   background: url("/images/signup.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 100vh; }
+
+.image-col {
+  background: url("/images/shopper.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
