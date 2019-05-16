@@ -9,7 +9,7 @@ module.exports = function(app) {
     });
   });
 
-  // Get route for returning items of a specific category
+  // // Get route for returning items of a specific category
   app.get("/api/items/:category", function(req, res) {
     // Add sequelize code to find all posts where the category is equal to req.params.category,
     // return the result to the user with res.json
@@ -23,6 +23,7 @@ module.exports = function(app) {
         res.render("products", dbitem);
       });
   });
+
   // PUT route for updating posts
   app.put("/api/items", function(req, res) {
     // Add code here to update a post using the values in req.body, where the id is equal to

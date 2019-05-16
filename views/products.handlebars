@@ -7,9 +7,9 @@
       <div class="card" style="width: 18rem; margin: 5px 0 5px 0;">
         <img src="..." class="card-img-top" alt="...">
         <div class="card-body">
-          <p><span id="itemName">Name</span></p>
-          <p><span id="itemPrice">Price</span></p>
-          <p><span id="quantity">Quantity Available:</span></p>
+          <p><span id="itemName"></span>Name: {{name}}</p>
+          <p><span id="itemPrice"></span>Price: ${{price}}</p>
+          <p><span id="quantity"></span>Quantity Available: {{quantity}}</p>
           <select class="form-control" id="exampleFormControlSelect1">
             <option selected>Quantity</option>
             <option>1</option>
@@ -19,7 +19,7 @@
             <option>5</option>
           </select>
           <br>
-          <a href="#" class="buy">Buy Now</a>
+          <button id="btnBuy"><a href="#" class="buy">Buy Now</a></button>
         </div>
       </div>
     </div>
