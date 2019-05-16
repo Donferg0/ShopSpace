@@ -1,6 +1,7 @@
-require("dotenv").config();
 var express = require("express");
 var exphbs = require("express-handlebars");
+require("dotenv").config();
+console.log(process.env.PASSWORD);
 
 var db = require("./models");
 

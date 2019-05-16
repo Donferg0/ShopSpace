@@ -1,4 +1,4 @@
-var db = require("../models");
+// var db = require("../models");
 
 module.exports = function(app) {
   // Load index page
@@ -15,16 +15,16 @@ module.exports = function(app) {
   // Load example page and pass in an example by id
   app.get("/login", function(req, res) {
     // db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.render("login")
-      //  {
-      //   example: dbExample
-      // });
+    res.render("login");
+    //  {
+    //   example: dbExample
+    // });
     // });
   });
 
   app.get("/register", function(req, res) {
     // db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.render("signup")
+    res.render("signup");
     //   , {
     //     example: dbExample
     //   });
