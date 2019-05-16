@@ -72,21 +72,11 @@ h3 {
     outline: none;
     height: 40px; }
 
-    .image-col , .slogan-col {
-      padding: 0;
-      background-color: rgb(202,235,238)
-    }
-
     .slogan {
       font-size: 80px;
       color: black;
       font-family: 'Lobster', cursive;
       text-align: center;
-    }
-
-    .index-container , .image-col{
-      min-height: 100vh;
-      background-color: rgb(202,235,238)
     }
 
     .bk-login {
@@ -107,16 +97,7 @@ h3 {
       min-height: 100vh;
      }
 
-     .image-col {
-      background: url("/images/shopper.jpg") no-repeat center center fixed;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-      min-height: 100vh;
-     }
-
-    
+     
 
   
   
