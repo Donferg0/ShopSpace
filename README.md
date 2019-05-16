@@ -1,6 +1,6 @@
-# Peer2Peer
+# ShopSpace
 
-Shopspace is a unique store styled and designed to help users gain new experience as they go through their shopping spree.
+ShopSpace is a unique store styled and designed to help users gain new experience as they go through their shopping spree.
 
 ## PACKAGES AND TECHNOLOGIES USED
 
