@@ -10,7 +10,7 @@ module.exports = function(app) {
   });
 
   // Get route for returning items of a specific category
-  app.get("/buynow", function(req, res) {
+  app.get("api/buynow", function(req, res) {
     // Add sequelize code to find all posts where the category is equal to req.params.category,
     // return the result to the user with res.json
     var price = req.body.item.price;
@@ -36,17 +36,17 @@ module.exports = function(app) {
               }
             }
           )
-          .then(function(response) {
+          .then(function() {
             var hbsObject = {
               total: total
             };
-            response.render("/Checkout", hbsObject);
+            res.render("/Checkout", hbsObject);
           });
       });
   });
 
   // Get route for returning items of a specific category
-  app.get("/items/category/:category", function(req, res) {
+  app.get("/api/items/:category", function(req, res) {
     // Add sequelize code to find all posts where the category is equal to req.params.category,
     // return the result to the user with res.json
 
