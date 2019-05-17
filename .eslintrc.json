@@ -20,7 +20,7 @@
         "eqeqeq": "error",
         "no-empty-function": "error",
         "no-multi-spaces": "error",
-        "no-unused-vars": "error",
+        "no-unused-vars": 1,
         "camelcase": "error",
         "indent": [
             "error",
@@ -34,6 +34,6 @@
             "error",
             "always"
         ],
-        "prettier/prettier": "error"
+        "prettier/prettier": "warning"
     }
 }
