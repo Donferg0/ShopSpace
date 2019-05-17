@@ -44,6 +44,7 @@ module.exports = function(app) {
     res.render("login");
   });
 
+  
   app.post("/login", function(req, res) {
     db.User
       .findOne({
@@ -74,6 +75,13 @@ module.exports = function(app) {
     } else {
       res.render("/signup");
     }
+    
+    app.get("/signup", function(req, res) {
+    res.render("signup");
+  });
+
+  app.get("/checkout", function(req, res) {
+    res.redirect("checkout");
   });
 
   // Render 404 page for any unmatched routes

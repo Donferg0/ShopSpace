@@ -5,6 +5,8 @@ module.exports = function(sequelize, DataTypes) {
     quantity: DataTypes.INTEGER,
     category: DataTypes.TEXT,
     image: DataTypes.TEXT
+    createdAt: DataTypes.DATE,
+    updatedAt: DataTypes.DATE
   });
 
   return items;

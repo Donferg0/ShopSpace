@@ -1,13 +1,21 @@
 h3 {
-  font: 400 100px/1.2 'Merienda One', Helvetica, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: rgba(0, 0, 0, 0.7);
   text-shadow: 3px 3px 3px #fff;
   text-align: center; }
 
 .navbar {
-  border-bottom: 2px solid black;
-  height: 20%;
-  background-color: white; }
+  height: 25%;
+  background-color: #ffcac3;
+  padding: 1rem 1rem; }
+
+.container {
+  width: 160%;
+  /* padding-right: 15px; */
+  padding-left: 70px;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: 'Montserrat', sans-serif; }
 
 .navbar-nav {
   margin: auto; }
@@ -32,12 +40,11 @@ h3 {
   padding: 70px 30px; }
 
 .logo {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
+  height: 42px;
   position: absolute;
-  top: -50px;
-  left: calc(50% - 50px); }
+  top: -19px;
+  left: calc(50% - 108px);
+  text-shadow: 2px 2px; }
 
 .login input {
   width: 100%;
@@ -46,7 +53,8 @@ h3 {
   border-bottom: 1px solid #fff;
   background: transparent;
   outline: none;
-  height: 40px; }
+  height: 40px;
+  color: white; }
 
 .con1 {
   opacity: 9.5;
@@ -68,13 +76,13 @@ h3 {
   border-bottom: 1px solid #fff;
   background: transparent;
   outline: none;
-  height: 40px; }
+  height: 40px;
+  color: white; }
 
-.slogan {
-  font-size: 80px;
+.h1 {
+  font-size: 200px;
   color: black;
-  font-family: 'Lobster', cursive;
-  text-align: center; }
+  font-family: 'Lobster', cursive; }
 
 .bk-login {
   background: url("/images/login.jpg") no-repeat center center fixed;
@@ -91,3 +99,59 @@ h3 {
   -o-background-size: cover;
   background-size: cover;
   min-height: 100vh; }
+
+.buy {
+  color: white;
+  background-color: #429e9d; }
+
+.quantity {
+  display: inline-block; }
+
+.quantity .input-text.qty {
+  width: 35px;
+  height: 39px;
+  padding: 0 5px;
+  text-align: center;
+  background-color: transparent;
+  border: 1px solid #efefef;
+  color: black; }
+
+.quantity.buttons_added {
+  text-align: left;
+  position: relative;
+  white-space: nowrap;
+  vertical-align: top; }
+
+.quantity.buttons_added input {
+  display: inline-block;
+  margin: 0;
+  vertical-align: top;
+  box-shadow: none; }
+
+.quantity.buttons_added .minus,
+.quantity.buttons_added .plus {
+  height: 41px;
+  background-color: #eeeeee;
+  border: 1px solid #efefef;
+  cursor: pointer;
+  width: 40px; }
+
+.quantity.buttons_added .minus {
+  border-right: 0; }
+
+.quantity.buttons_added .plus {
+  border-left: 0; }
+
+.quantity.buttons_added .minus:hover,
+.quantity.buttons_added .plus:hover {
+  background: #eeeeee; }
+
+.quantity input::-webkit-outer-spin-button,
+.quantity input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  margin: 0; }
+
+.quantity.buttons_added .minus:focus,
+.quantity.buttons_added .plus:focus {
+  outline: none; }
