@@ -1,34 +1,34 @@
-// module.exports = function(sequelize, DataTypes) {
-
-//   var users = sequelize.define("users", {
-//     email: DataTypes.STRING,
-//     password: DataTypes.TEXT
-//   });
-
-//   // users.associate = function (models) {
-//   //   // Associating Author with Posts
-//   //   // When an Author is deleted, also delete any associated Posts
-//   //   users.hasMany(models.items, {
-//   //     onDelete: "cascade"
-//   //   });
-//   // };
-
-//   return users;
-// };
-
 module.exports = function(sequelize, DataTypes) {
   var User = sequelize.define("User", {
+    firstName: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [5]
+      }
+    },
+    lastName: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [2]
+      }
+    },
     email: {
       type: DataTypes.STRING,
-      unique: true
+      validate: {
+        isEmail: true
+      }
     },
-    firstName: DataTypes.STRING,
-    lastName: DataTypes.STRING,
     password: {
       type: DataTypes.STRING,
-      allowNull: false
+      validate: {
+        // IsLowercase: true,
+        // isUppercase: true,
+        // isAlphanumeric: true,
+        len: [6, 10]
+      }
     }
   });
-
   return User;
 };
