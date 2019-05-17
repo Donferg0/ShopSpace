@@ -4,7 +4,7 @@ $(document).on("click", ".add-item", function () {
     var itemValue = ($(`#${id}`).text())
     itemValue++
     $(`#${id}`).text(itemValue)
-    var ele = $(this).parent().find('#btnBuy')
+    var ele = $(this).parent().find('#addToCart')
     ele.attr('data-item_quantity', itemValue)
 
 })
@@ -14,7 +14,7 @@ $(document).on("click", ".subtract-item", function () {
     var itemValue = ($(`#${id}`).text())
     itemValue--
     $(`#${id}`).text(itemValue)
-    var ele = $(this).parent().find('#btnBuy')
+    var ele = $(this).parent().find('#addToCart')
     ele.attr('data-item_quantity', itemValue)
 })
 
