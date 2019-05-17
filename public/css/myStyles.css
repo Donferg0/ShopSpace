@@ -1,13 +1,13 @@
 h3 {
   font-family: 'Montserrat', sans-serif;
-  color: rgba(0, 0, 0, 0.7);
   text-shadow: 3px 3px 3px #fff;
   text-align: center; }
 
 .navbar {
   height: 25%;
   background-color: #ffcac3;
-  padding: 1rem 1rem; }
+  padding: 1rem 1rem;
+  color: #47d3bb; }
 
 .container {
   width: 160%;
@@ -30,7 +30,6 @@ h3 {
   opacity: 9.5;
   width: 320px;
   height: 420px;
-  background: rgba(0, 0, 0, 0.5);
   color: #fff;
   top: 50%;
   left: 50%;
@@ -60,7 +59,6 @@ h3 {
   opacity: 9.5;
   width: 400px;
   height: 700px;
-  background: rgba(0, 0, 0, 0.5);
   color: #fff;
   top: 50%;
   left: 50%;
@@ -102,7 +100,7 @@ h3 {
 
 .buy {
   color: white;
-  background-color: #429e9d; }
+  background-color: #47d3bb; }
 
 .quantity {
   display: inline-block; }

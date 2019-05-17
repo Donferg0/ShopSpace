@@ -4,6 +4,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
+        isAlpha: true,
         len: [5]
       }
     },
@@ -11,6 +12,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
+        isAlpha: true,
         len: [2]
       }
     },
@@ -28,14 +30,6 @@ module.exports = function(sequelize, DataTypes) {
         // isAlphanumeric: true,
         len: [6, 10]
       }
-    },
-    createdAt: {
-      type: DataTypes.DATE,
-      default: Date.now()
-    },
-    updatedAt: {
-      type: DataTypes.DATE,
-      default: Date.now()
     }
   });
   return User;
