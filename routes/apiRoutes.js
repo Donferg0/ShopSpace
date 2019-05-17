@@ -40,7 +40,7 @@ module.exports = function(app) {
             var hbsObject = {
               total: total
             };
-            res.render("/Checkout", hbsObject);
+            res.render("checkout", hbsObject);
           });
       });
   });

@@ -9,12 +9,12 @@ module.exports = function(app) {
     res.render("login");
   });
 
-  app.get("/register", function(req, res) {
+  app.get("/signup", function(req, res) {
     res.render("signup");
   });
 
   app.get("/checkout", function(req, res) {
-    res.render("checkout");
+    res.redirect("checkout");
   });
 
   // Render 404 page for any unmatched routes
