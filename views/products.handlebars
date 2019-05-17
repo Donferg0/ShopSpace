@@ -1,29 +1,31 @@
 <div class="index-container">
     <nav class="navbar navbar-expand-lg">
-
         <div class="container">
-                <div class="col-lg-8s">
-                    <a href="/#"><button class="btn btn-lg btn-primary"><span></span>Login</button></a>
+            <div class="row">
+                <div class="col ">
+                    <a href="/login"><button class="btn btn-sm btn-primary"><span></span>Login</button></a> |
+                     <a href="/#"><button class="btn btn-sm btn-primary"><span
+                            class="fa fa-shopping-cart"></span></button></a>
                 </div>
-                <div class="col">
-                    <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
-                </div>
-                <div class="col">
-                    <a class="nav-link" href="/api/items/clothing">Clothing</a>
-                </div>
-                <div class="col">
-                    <a href="/#"><img src="/images/officiallogo.png" class="logo" alt="..."> </a>
-                </div>
-                <div class="col">
-                    <a class="nav-link" href="/api/items/beauty">Beauty</a>
-                </div>
-                <div class="col">
-                    <a class="nav-link" href="/api/items/accessories">Accessories</a>
-                </div>
-                <div class="col">
-                    <a href="/#"><button class="btn btn-lg btn-primary"><span
-                                class="fa fa-shopping-cart"></span></button></a>
-                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="col">
+                <a class="nav-link" href="/api/items/home">Home<span class="sr-only">(current)</span></a>
+            </div>
+            <div class="col">
+                <a class="nav-link" href="/api/items/clothing">Clothing</a>
+            </div>
+            <div class="logo">
+                {{!-- <a href="/#"><img src="/images/theone.png" class="logo" alt="..."></a> --}}
+                <h>ShopSpace</h>
+            </div>
+            <div class="col">
+                <a class="nav-link" href="api/items/beauty">Beauty</a>
+            </div>
+            <div class="col">
+                <a class="nav-link" href="api/items/accessories">Accessories</a>
+            </div>
         </div>
 
     </nav>

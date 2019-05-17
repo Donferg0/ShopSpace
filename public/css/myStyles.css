@@ -31,14 +31,6 @@ h3 {
   box-sizing: border-box;
   padding: 70px 30px; }
 
-.logo {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  position: absolute;
-  top: -50px;
-  left: calc(50% - 50px); }
-
 .login input {
   width: 100%;
   margin-bottom: 20px;
@@ -46,7 +38,8 @@ h3 {
   border-bottom: 1px solid #fff;
   background: transparent;
   outline: none;
-  height: 40px; }
+  height: 40px;
+  color: white; }
 
 .con1 {
   opacity: 9.5;
@@ -68,13 +61,13 @@ h3 {
   border-bottom: 1px solid #fff;
   background: transparent;
   outline: none;
-  height: 40px; }
+  height: 40px;
+  color: white; }
 
-.slogan {
+.logo {
   font-size: 80px;
   color: black;
-  font-family: 'Lobster', cursive;
-  text-align: center; }
+  font-family: 'Lobster', cursive; }
 
 .bk-login {
   background: url("/images/login.jpg") no-repeat center center fixed;
@@ -91,3 +84,9 @@ h3 {
   -o-background-size: cover;
   background-size: cover;
   min-height: 100vh; }
+
+.btn {
+  width: 260px; }
+
+.btn1 {
+  width: 300px; }
