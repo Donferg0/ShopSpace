@@ -101,37 +101,57 @@ h3 {
   min-height: 100vh; }
 
 .buy {
-  color: #FFFFFF;
-  width: 60%;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #FFCAC3;
-  *background-color: #FFCAC3;
-  background-image: -moz-linear-gradient(top, #FFE98F, #FFCAC3);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#FFE98F), to(#FFCAC3));
-  background-image: -webkit-linear-gradient(top, #FFE98F, #FFCAC3);
-  background-image: -o-linear-gradient(top, #FFE98F, #FFCAC3);
-  background-image: linear-gradient(to bottom, #FFE98F, #FFCAC3);
-  background-repeat: repeat-x;
-  border-color: #FFCAC3;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFE98F', endColorstr='#FFCAC3', GradientType=0);
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false); }
+  color: white;
+  background-color: #429e9d; }
 
-.buy:hover,
-.buy:focus,
-.buy:active,
-.buy.active,
-.buy.disabled,
-.buy[disabled] {
-  color: #FFFFFF;
-  background-color: #FFCAC3;
-  *background-color: #003bb3; }
+.quantity {
+  display: inline-block; }
 
-/* .btn1 {
-  width: 260px; }
+.quantity .input-text.qty {
+  width: 35px;
+  height: 39px;
+  padding: 0 5px;
+  text-align: center;
+  background-color: transparent;
+  border: 1px solid #efefef;
+  color: black; }
 
-.btn2 {
-  width: 340px; }
+.quantity.buttons_added {
+  text-align: left;
+  position: relative;
+  white-space: nowrap;
+  vertical-align: top; }
 
-.btn3, .btn4 {
-  background-color: gray; } */
+.quantity.buttons_added input {
+  display: inline-block;
+  margin: 0;
+  vertical-align: top;
+  box-shadow: none; }
+
+.quantity.buttons_added .minus,
+.quantity.buttons_added .plus {
+  height: 41px;
+  background-color: #eeeeee;
+  border: 1px solid #efefef;
+  cursor: pointer;
+  width: 40px; }
+
+.quantity.buttons_added .minus {
+  border-right: 0; }
+
+.quantity.buttons_added .plus {
+  border-left: 0; }
+
+.quantity.buttons_added .minus:hover,
+.quantity.buttons_added .plus:hover {
+  background: #eeeeee; }
+
+.quantity input::-webkit-outer-spin-button,
+.quantity input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  margin: 0; }
+
+.quantity.buttons_added .minus:focus,
+.quantity.buttons_added .plus:focus {
+  outline: none; }

@@ -47,19 +47,11 @@
             <p><span id="itemName"></span>Name: {{name}}</p>
             <p><span id="itemPrice"></span>Price: ${{price}}</p>
             <p><span id="quantity"></span>Quantity Available: {{quantity}}</p>
-            <select class="form-control" id="exampleFormControlSelect1">
-              <option selected>Quantity</option>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-              <option>6</option>
-              <option>7</option>
-              <option>8</option>
-              <option>9</option>
-              <option>10</option>
-            </select>
+            <div class="quantity buttons_added">
+              <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity"
+                value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button"
+                value="+" class="plus">
+            </div>
             <br>
             <button id="btnBuy"><a href="/checkout" class="buy">Buy Now</a></button>
           </div>
