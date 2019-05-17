@@ -3,8 +3,8 @@ module.exports = function(sequelize, DataTypes) {
     name: DataTypes.STRING,
     price: DataTypes.INTEGER,
     quantity: DataTypes.INTEGER,
-    category: DataTypes.TEXT,
-    image: DataTypes.TEXT
+    category: DataTypes.TEXT
+    // image: DataTypes.TEXT,
   });
 
   return items;

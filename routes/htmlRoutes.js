@@ -31,7 +31,7 @@ module.exports = function(app) {
       lastName: req.body.last,
       password: req.body.password
     })
-      .then(function(created) {
+      .then(function() {
         res.redirect("/login");
       })
       .catch(function(err) {
@@ -57,8 +57,7 @@ module.exports = function(app) {
           return;
         }
 
-       var tUser = { isAuthenticated : true,
-                      currentUser : found} 
+        var tUser = { isAuthenticated: true, currentUser: found };
 
         res.render("index", tUser);
       })

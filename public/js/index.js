@@ -27,10 +27,10 @@ $(document).ready(function () {
 
     //Call your checkOut function from API and pass in your shopping cart.
     API.checkout(shoppingCart)
-    .then(function(response){
-      //removing shopping cart from local storage once checkout is complete
-      localStorage.removeItem('shoppingCart')
-    })
+      .then(function (response) {
+        //removing shopping cart from local storage once checkout is complete
+        localStorage.removeItem('shoppingCart')
+      })
     console.log(shoppingCart)
   };
 
