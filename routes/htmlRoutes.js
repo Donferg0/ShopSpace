@@ -1,5 +1,3 @@
-var express = require("express");
-var router = express.Router();
 var session = require("express-session");
 var db = require("../models");
 
@@ -24,13 +22,12 @@ module.exports = function(app) {
   });
 
   app.post("/register", function(req, res) {
-    db.User
-      .create({
-        email: req.body.email,
-        firstName: req.body.first,
-        lastName: req.body.last,
-        password: req.body.password
-      })
+    db.User.create({
+      email: req.body.email,
+      firstName: req.body.first,
+      lastName: req.body.last,
+      password: req.body.password
+    })
       .then(function(created) {
         res.redirect("/login");
       })
@@ -44,15 +41,13 @@ module.exports = function(app) {
     res.render("login");
   });
 
-  
   app.post("/login", function(req, res) {
-    db.User
-      .findOne({
-        where: {
-          email: req.body.email,
-          password: req.body.password
-        }
-      })
+    db.User.findOne({
+      where: {
+        email: req.body.email,
+        password: req.body.password
+      }
+    })
       .then(function(found) {
         if (!found) {
           // show error to user
