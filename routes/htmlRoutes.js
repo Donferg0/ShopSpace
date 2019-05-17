@@ -70,6 +70,13 @@ module.exports = function(app) {
     } else {
       res.render("/signup");
     }
+    
+    app.get("/signup", function(req, res) {
+    res.render("signup");
+  });
+
+  app.get("/checkout", function(req, res) {
+    res.render("checkout");
   });
 
   // Render 404 page for any unmatched routes
