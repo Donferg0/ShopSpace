@@ -10,7 +10,10 @@ module.exports = function(app) {
 
   // Load index page
   app.get("/", function(req, res) {
-    res.render("index");
+    res.render("index", {
+      isAuthenticated: req.session.isAuthenticated || false,
+      currentUser: req.session.currentUser || undefined
+    });
   });
 
   app.get("/register", function(req, res) {
@@ -54,10 +57,10 @@ module.exports = function(app) {
           return;
         }
 
-        req.session.isAuthenticated = true;
-        req.session.currentUser = found;
+       var tUser = { isAuthenticated : true,
+                      currentUser : found} 
 
-        res.redirect("/");
+        res.render("index", tUser);
       })
       .catch(function(err) {
         console.log(err);
@@ -68,19 +71,20 @@ module.exports = function(app) {
     if (isAuthenticated) {
       res.render("checkout");
     } else {
-      res.render("/signup");
+      res.render("signup");
     }
-    
+
     app.get("/signup", function(req, res) {
-    res.render("signup");
-  });
+      res.render("signup");
+    });
 
-  app.get("/checkout", function(req, res) {
-    res.render("checkout");
-  });
+    app.get("/checkout", function(req, res) {
+      res.render("checkout");
+    });
 
-  // Render 404 page for any unmatched routes
-  app.get("*", function(req, res) {
-    res.render("404");
+    // Render 404 page for any unmatched routes
+    app.get("*", function(req, res) {
+      res.render("404");
+    });
   });
 };
