@@ -2,9 +2,6 @@
   <nav class="navbar navbar-expand-lg">
 
     <div class="container">
-      <div class="col-lg-8s">
-        <a href="/login"><button class="btn btn-sm btn-primary"><span></span>Login</button></a>
-      </div>
       <div class="col">
         <a class="nav-link" href="/api/items/home">Home<span class="sr-only">(current)</span></a>
       </div>
@@ -48,12 +45,12 @@
             <p><span id="itemPrice"></span>Price: ${{price}}</p>
             <p><span id="quantity"></span>Quantity Available: {{quantity}}</p>
             <div class="quantity buttons_added">
-              <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity"
+              <input type="button" value="-" class="subtract-item"><input type="number" step="1" min="1" max="" name="quantity"
                 value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button"
-                value="+" class="plus">
+                value="+" class="add-item">
             </div>
             <br>
-            <button id="btnBuy"><a href="/checkout" class="buy">Buy Now</a></button>
+            <button id="addToCart"><a href="/checkout" class="buy">Add To Cart</a></button>
           </div>
         </div>
       </div>

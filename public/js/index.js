@@ -34,7 +34,7 @@ $(document).ready(function () {
     console.log(shoppingCart)
   };
 
-  $(document).on("click", "#btnBuy", handleBuyBtnClick)
+  $(document).on("click", "#addToCart", handleBuyBtnClick)
 
   // The API object contains methods for each kind of request we'll make
   var API = {
