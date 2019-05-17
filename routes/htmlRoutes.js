@@ -28,7 +28,7 @@ module.exports = function(app) {
       lastName: req.body.last,
       password: req.body.password
     })
-      .then(function(created) {
+      .then(function() {
         res.redirect("/login");
       })
       .catch(function(err) {
@@ -62,25 +62,26 @@ module.exports = function(app) {
       .catch(function(err) {
         console.log(err);
       });
-  });
 
-  app.get("/checkout", function(req, res) {
-    if (isAuthenticated) {
-      res.render("checkout");
-    } else {
-      res.render("/signup");
-    }
-    
+    app.get("/checkout", function(req, res) {
+      if (isAuthenticated) {
+        res.render("checkout");
+      } else {
+        res.render("/signup");
+      }
+    });
+
     app.get("/signup", function(req, res) {
-    res.render("signup");
-  });
+      res.render("signup");
+    });
 
-  app.get("/checkout", function(req, res) {
-    res.render("checkout");
-  });
+    app.get("/checkout", function(req, res) {
+      res.render("checkout");
+    });
 
-  // Render 404 page for any unmatched routes
-  app.get("*", function(req, res) {
-    res.render("404");
+    // Render 404 page for any unmatched routes
+    app.get("*", function(req, res) {
+      res.render("404");
+    });
   });
 };

@@ -28,6 +28,14 @@ module.exports = function(sequelize, DataTypes) {
         // isAlphanumeric: true,
         len: [6, 10]
       }
+    },
+    createdAt: {
+      type: DataTypes.DATE,
+      default: Date.now()
+    },
+    updatedAt: {
+      type: DataTypes.DATE,
+      default: Date.now()
     }
   });
   return User;

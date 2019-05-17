@@ -4,12 +4,15 @@ module.exports = function(sequelize, DataTypes) {
     price: DataTypes.INTEGER,
     quantity: DataTypes.INTEGER,
     category: DataTypes.TEXT,
-    image: DataTypes.TEXT
-<<<<<<< HEAD
-=======
-    createdAt: DataTypes.DATE,
-    updatedAt: DataTypes.DATE
->>>>>>> 241c45d5036ea6bd8943a175d10a9cdc885e7a36
+    // image: DataTypes.TEXT,
+    createdAt: {
+      type: DataTypes.DATE,
+      default: Date.now()
+    },
+    updatedAt: {
+      type: DataTypes.DATE,
+      default: Date.now()
+    }
   });
 
   return items;
