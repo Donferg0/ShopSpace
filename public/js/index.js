@@ -1,13 +1,44 @@
-$(document).ready(function() {
+$(document).ready(function () {
+  //create global shopping cart variable to store items
+  //must JSON.parse item from local storage because it was stored as a string in order to be functional
+  var shoppingCart = JSON.parse(localStorage.getItem('shoppingCart')) || {};
+  var handleBuyBtnClick = function () {
 
-  var shoppingCart = {};
-    $(document).on("click", ".checkout", 
+    //create any variables needed and grab data from what was clicked
+    //handlebars will need to populate any data attributes that you are trying to get information from
+    var name = $(this).attr('data-item_name')
 
-  $(document).on("click", ".buy", handleBuyBtnClick);
+    //creating a blank object that will hold information on each item
+    var item_info = {}
+
+    item_info.price = 3.99;
+    item_info.purchase_quantity = 10;
+
+    shoppingCart = {
+      //utilize the spread operator in order to keep the current state of the shoppingCart, and then update the new item
+      ...shoppingCart,
+      // [variable] creates a variable that is what ever the name of the above var name variable is.
+      [name]: item_info
+    }
+
+    //setting localStorage to hold shopping cart content for persistance
+    //must store object in local storage as a string for functionality
+    localStorage.setItem('shoppingCart', JSON.stringify(shoppingCart))
+
+    //Call your checkOut function from API and pass in your shopping cart.
+    API.checkout(shoppingCart)
+    .then(function(response){
+      //removing shopping cart from local storage once checkout is complete
+      localStorage.removeItem('shoppingCart')
+    })
+    console.log(shoppingCart)
+  };
+
+  $(document).on("click", "#btnBuy", handleBuyBtnClick)
 
   // The API object contains methods for each kind of request we'll make
   var API = {
-    buyItem: function(buy) {
+    buyItem: function (buy) {
       return $.ajax({
         headers: {
           "Content-Type": "application/json"
@@ -17,7 +48,7 @@ $(document).ready(function() {
         data: JSON.stringify(buy)
       });
     },
-    checkout: function(cart) {
+    checkout: function (cart) {
       return $.ajax({
         headers: {
           "Content-Type": "application/json"
@@ -28,15 +59,5 @@ $(document).ready(function() {
       });
     }
   };
-
-  // handleDeleteBtnClick is called when an example's delete button is clicked
-  var handleBuyBtnClick = function() {
-    var idToBuy = $(this)
-      .parent()
-      .attr("data-id");
-
-    API.buyItem(idToBuy).then(function() {});
-  };
 });
-
 
