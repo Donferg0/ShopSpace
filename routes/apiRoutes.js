@@ -57,7 +57,11 @@ module.exports = function(app) {
         }
       })
       .then(function(dbitem) {
-        res.render("products", dbitem);
+        var handlebarObject = {
+          product: []
+        }
+        dbitem.forEach(item => handlebarObject.product.push(item))
+        res.render("products", handlebarObject);
       });
   });
 
