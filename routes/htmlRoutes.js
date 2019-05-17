@@ -89,7 +89,6 @@ module.exports = function (app) {
   });
 
   app.get("/checkout", function (req, res) {
-    console.log(req.session)
     if (req.session.isAuthenticated) {
       res.render("checkout");
     } else {

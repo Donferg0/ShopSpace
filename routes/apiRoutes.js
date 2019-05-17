@@ -45,6 +45,12 @@ module.exports = function(app) {
       });
   });
 
+  app.post("/api/checkouts", function(req, res) {
+    // var myCart = (JSON.parse(req.body))
+    // console.log(myCart)
+    res.render("checkout")  
+  })
+
   // Get route for returning items of a specific category
   app.get("/api/items/:category", function(req, res) {
     // Add sequelize code to find all posts where the category is equal to req.params.category,
@@ -84,4 +90,5 @@ module.exports = function(app) {
         res.json(dbitems);
       });
   });
+
 };

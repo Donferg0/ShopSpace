@@ -24,13 +24,10 @@ $(document).ready(function () {
     //setting localStorage to hold shopping cart content for persistance
     //must store object in local storage as a string for functionality
     localStorage.setItem('shoppingCart', JSON.stringify(shoppingCart))
+    $("#shadow-cart").val(JSON.stringify(shoppingCart))
+    console.log($("#shadow-cart").val())
 
     //Call your checkOut function from API and pass in your shopping cart.
-    API.checkout(shoppingCart)
-      .then(function (response) {
-        //removing shopping cart from local storage once checkout is complete
-        localStorage.removeItem('shoppingCart')
-      })
     console.log(shoppingCart)
   };
 
@@ -54,7 +51,7 @@ $(document).ready(function () {
           "Content-Type": "application/json"
         },
         type: "POST",
-        url: "api/checkout",
+        url: "/api/checkouts",
         data: JSON.stringify(cart)
       });
     }
