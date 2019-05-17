@@ -4,6 +4,7 @@ module.exports = function(sequelize, DataTypes) {
     price: DataTypes.INTEGER,
     quantity: DataTypes.INTEGER,
     category: DataTypes.TEXT,
+    image: DataTypes.TEXT
     createdAt: DataTypes.DATE,
     updatedAt: DataTypes.DATE
   });

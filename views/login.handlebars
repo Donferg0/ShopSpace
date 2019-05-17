@@ -1,16 +1,23 @@
+  <form action="/login" method="POST">
   <div class="bk-login">
   <div class="login">
     <h1>Log In</h1>
     
     <hr>
     <label for="email"><b>Email</b></label>
-    <input type="text" class="email">
+    <input type="text" name="email" id="email">
 
     <label for="password"><b>Password</b></label>
-    <input type="text" class="password">
+    <input type="password" name="password" id="password">
 
+    <a href="/" class="btn btn-primary">Submit</a>
+    <br>
+    <p>Dont Have an Account? <a href="/register">Sign Up</a>.</p>
+    
     <a href="#" class="btn btn-primary btn1">Submit</a>
     <br>
     <p>Dont Have an Account? <a href="/signup">Sign Up</a>.</p>
+    
   </div>
   </div>
+  </form>
