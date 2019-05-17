@@ -11,8 +11,8 @@ $(document).ready(function () {
     //creating a blank object that will hold information on each item
     var item_info = {}
 
-    item_info.price = 3.99;
-    item_info.purchase_quantity = 10;
+    item_info.price = $(this).attr('data-item_price')
+    item_info.purchase_quantity = $(this).attr('data-item_quantity')
 
     shoppingCart = {
       //utilize the spread operator in order to keep the current state of the shoppingCart, and then update the new item
