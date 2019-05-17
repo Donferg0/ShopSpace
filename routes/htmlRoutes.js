@@ -67,11 +67,15 @@ module.exports = function(app) {
   });
 
   app.get("/checkout", function(req, res) {
+<<<<<<< HEAD
     if (isAuthenticated) {
       res.render("checkout");
     } else {
       res.render("/signup");
     }
+=======
+    res.render("checkout");
+>>>>>>> 55bf8a402b2ae30ee57b96905d4766dbfadea4ed
   });
 
   // Render 404 page for any unmatched routes

@@ -184,8 +184,8 @@ h3 {
       box-shadow: none;
      }
      
-     .quantity.buttons_added .minus,
-     .quantity.buttons_added .plus {
+     .quantity.buttons_added .subtract-item,
+     .quantity.buttons_added .add-item {
       // padding: 7px 10px 8px;
       height: 41px;
       background-color: #eeeeee;
@@ -194,14 +194,14 @@ h3 {
       width: 40px;
     }
      
-     .quantity.buttons_added .minus {
+     .quantity.buttons_added .subtract-item {
       border-right: 0; }
      
-     .quantity.buttons_added .plus {
+     .quantity.buttons_added .add-item {
       border-left: 0; }
      
-     .quantity.buttons_added .minus:hover,
-     .quantity.buttons_added .plus:hover {
+     .quantity.buttons_added .subtract-item:hover,
+     .quantity.buttons_added .add-item:hover {
       background: #eeeeee; }
      
      .quantity input::-webkit-outer-spin-button,
@@ -210,8 +210,8 @@ h3 {
       -moz-appearance: none;
       margin: 0; }
       
-      .quantity.buttons_added .minus:focus,
-     .quantity.buttons_added .plus:focus {
+      .quantity.buttons_added .subtract-item:focus,
+     .quantity.buttons_added .add-item:focus {
       outline: none; }
      
 
