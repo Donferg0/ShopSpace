@@ -14,7 +14,7 @@ module.exports = function(app) {
   });
 
   app.get("/checkout", function(req, res) {
-    res.redirect("checkout");
+    res.render("checkout");
   });
 
   // Render 404 page for any unmatched routes
