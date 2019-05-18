@@ -18,9 +18,9 @@
               <div class="col">
                 <a class="nav-link text-center" href="/api/items/clothing">Clothing</a>
               </div>
-              
+
               <div class="col">
-        
+
                 <img src="/images/design4.png" class="logo" alt="...">
               </div>
               <div class="col">
@@ -32,42 +32,49 @@
             </div>
           </div>
         </div>
+        {{!-- <div class="col-2 text-right">
+          <a href="/login"><button class="btn btn-sm btn-primary btn3"><span></span>Login</button></a> |
+
+          <button type='Submission' class="btn btn-sm btn-primary btn4 goToCart"><span
+              class="fa fa-shopping-cart"></span></button> --}}
         <div class="col-2 text-right">
-            <a href="/login"><button class="btn btn-sm btn-primary btn3"><span></span>Login</button></a> |
-            <a href="/checkout"><button class="btn btn-sm btn-primary btn4"><span
-                        class="fa fa-shopping-cart"></span></button></a>
+          <a href="/login"><button class="btn btn-sm btn-primary btn3"><span></span>Login</button></a> |
+          <a href="/checkout"><button class="btn btn-sm btn-primary btn4"><span
+                class="fa fa-shopping-cart"></span></button></a>
         </div>
+
       </div>
     </div>
+</div>
 
-  </nav>
+</nav>
 
 
-  <br>
-  <br>
-  <div class="container">
-    <div class="row">
-      {{#each product}}
-      <div class="col-4">
-        <div class="card" style="width: 18rem; margin: 5px 0 5px 0;">
-          <img src="{{img}}" class="card-img-top" style="height: 280; width:286;" alt="{{img}}">
-          <div class="card-body" style="width: 18rem; margin: 5px 0 5px 0;">
-            <p><span id="itemName"></span>Name: <span id='name2grab'>{{name}}</span></p>
-            <p><span id="itemPrice"></span>Price: ${{price}}</p>
-            <p><span id="quantity"></span>Quantity Available: {{quantity}}</p>
-            <div class="quantity buttons_added text-center m-auto">
-              <input data-name={{name}} type="button" value="-" class="subtract-item">
-              {{!-- <input type="number" step="1" min="1" max="" name="quantity"
+<br>
+<br>
+<div class="container">
+  <div class="row">
+    {{#each product}}
+    <div class="col-4">
+      <div class="card" style="width: 18rem; margin: 5px 0 5px 0;">
+        <img src="{{img}}" class="card-img-top" style="height: 280; width:286;" alt="{{img}}">
+        <div class="card-body" style="width: 18rem; margin: 5px 0 5px 0;">
+          <p><span id="itemName"></span>Name: <span id='name2grab'>{{name}}</span></p>
+          <p><span id="itemPrice"></span>Price: ${{price}}</p>
+          <p><span id="quantity"></span>Quantity Available: {{quantity}}</p>
+          <div class="quantity buttons_added text-center m-auto">
+            <input data-name={{name}} type="button" value="-" class="subtract-item">
+            {{!-- <input type="number" step="1" min="1" max="" name="quantity"
                 value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""/> --}}
-              <h1 class="product-counter" id={{name}}>0</h1>
-              <input data-name={{name}} type="button" value="+" class="add-item">
-              <br>
-              <button id="addToCart" class="btn btn-sm btn-primary" data-item_price={{price}}>Add To Cart</button>
-            </div>
+            <h1 class="product-counter" id={{name}}>1</h1>
+            <input data-name={{name}} type="button" value="+" class="add-item">
+            <br>
+            <button id="addToCart" class="btn btn-sm btn-primary" data-item_price={{price}}>Add To Cart</button>
           </div>
         </div>
       </div>
-      {{/each}}
     </div>
+    {{/each}}
   </div>
+</div>
 </div>

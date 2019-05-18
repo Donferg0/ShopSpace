@@ -1,3 +1,5 @@
+// import { totalmem } from "os";
+
 $(document).ready(function(){
   var cartQty = 0
   var cartful = JSON.parse(localStorage.getItem('shoppingCart'))
@@ -8,6 +10,7 @@ $(document).ready(function(){
     var h3 = $('<h3>')
     var price = $('<p>')
     var qty = $('<p>')
+    // var total = $('<p>')
 
 
     h3.text(key)
@@ -16,7 +19,8 @@ $(document).ready(function(){
     element_one.append(price)
     qty.text('Quantity: ' + cartful[key].purchase_quantity)
     element_one.append(qty)
-    // console.log(h3)
+// console.log(h3)
+
 
     // console.log(cartful[keys])
     $("#dream-catcher").append(element_one)
