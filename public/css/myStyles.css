@@ -39,9 +39,9 @@ h3 {
 
 .logo {
   height: 42px;
-  position: absolute;
+  /* position: absolute;
   top: -19px;
-  left: calc(50% - 108px);
+  left: calc(50% - 108px); */
   text-shadow: 2px 2px; }
 
 .login input {
@@ -152,3 +152,11 @@ h3 {
 .quantity.buttons_added .subtract-item:focus,
 .quantity.buttons_added .add-item:focus {
   outline: none; }
+
+  .product-counter {
+    display: inline;
+  }
+
+  .quantity {
+    display: block;
+  }

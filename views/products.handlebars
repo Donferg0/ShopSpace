@@ -1,39 +1,75 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="/css/myStyles.css">
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/myStyles.css">
 <div class="index-container">
   <nav class="navbar navbar-expand-lg">
 
-    <div class="container">
-      <div class="col">
-        <a class="nav-link" href="/api/items/home">Home<span class="sr-only">(current)</span></a>
+    <div class="container-fluid">
+      <div class="row w-100">
+        <div class="col-2">
+
+        </div>
+        <div class="col-8">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col">
+                <a class="nav-link text-center" href="/api/items/home">Decor<span class="sr-only">(current)</span></a>
+              </div>
+              <div class="col">
+                <a class="nav-link text-center" href="/api/items/clothing">Clothing</a>
+              </div>
+              
+              <div class="col">
+        
+                <img src="/images/design4.png" class="logo" alt="...">
+              </div>
+              <div class="col">
+                <a class="nav-link text-center" href="/api/items/beauty">Beauty</a>
+              </div>
+              <div class="col">
+                <a class="nav-link text-center" href="/api/items/accessories">Accessories</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-2 text-right">
+          <a href="/login"><button class="btn btn-sm btn-primary btn3"><span></span>Login</button></a> |
+
+          <button type='Submission' class="btn btn-sm btn-primary btn4 goToCart"><span
+              class="fa fa-shopping-cart"></span></button>
+
+        </div>
       </div>
-      <div class="col">
-        <a class="nav-link" href="/api/items/clothing">Clothing</a>
-      </div>
-      <div class="col">
-        <a href="/#"><img src="/images/design4.png" class="logo" alt="..."></a>
-      </div>
-      {{!-- <div class="col">
+    </div>
+
+    {{!-- <div class="container-fluid">
+        <div class="col">
+          <a class="nav-link" href="/api/items/home">Home<span class="sr-only">(current)</span></a>
+        </div>
+        <div class="col">
+          <a class="nav-link" href="/api/items/clothing">Clothing</a>
+        </div>
+        <div class="col">
+          <a href="/#"><img src="/images/design4.png" class="logo" alt="..."></a>
+        </div> --}}
+    {{!-- <div class="col">
             <h1>ShopSpace</h1>
         </div> --}}
-      <div class="col">
-        <a class="nav-link" href="/api/items/beauty">Beauty</a>
-      </div>
-      <div class="col">
-        <a class="nav-link" href="/api/items/accessories">Accessories</a>
-      </div>
-      <div class="col">
-        <a href="/login"><button class="btn btn-sm btn-primary btn3"><span></span>Login</button></a> |
-        <form action='/api/checkouts' method='POST'>
-        <input id="shadow-cart" name="shadow-cart" value='' style="display: none"></input>
-        <button type='Submission' class="btn btn-sm btn-primary btn4 goToCart"><span
+    {{!-- <div class="col">
+          <a class="nav-link" href="/api/items/beauty">Beauty</a>
+        </div>
+        <div class="col">
+          <a class="nav-link" href="/api/items/accessories">Accessories</a>
+        </div>
+        <div class="col">
+          <a href="/login"><button class="btn btn-sm btn-primary btn3"><span></span>Login</button></a> |
+
+          <button type='Submission' class="btn btn-sm btn-primary btn4 goToCart"><span
               class="fa fa-shopping-cart"></span></button>
-        </form>
-      </div>
+        </div> --}}
 
 
-    </div>
+    {{!-- </div> --}}
 
   </nav>
 
@@ -47,19 +83,22 @@
         <div class="card" style="width: 18rem; margin: 5px 0 5px 0;">
           <img src="{{img}}" class="card-img-top" alt="{{img}}">
           <div class="card-body">
-            <p><span id="itemName"></span>Name: <span id='name2grab' >{{name}}</span></p>
+            <p><span id="itemName"></span>Name: <span id='name2grab'>{{name}}</span></p>
             <p><span id="itemPrice"></span>Price: ${{price}}</p>
             <p><span id="quantity"></span>Quantity Available: {{quantity}}</p>
-            <div class="quantity buttons_added">
+            <div class="quantity buttons_added text-center m-auto">
               <input data-name={{name}} type="button" value="-" class="subtract-item">
               {{!-- <input type="number" step="1" min="1" max="" name="quantity"
                 value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""/> --}}
-                <h1 id={{name}}>0</h1>
+              <h1 class="product-counter" id={{name}}>0</h1>
               <input data-name={{name}} type="button" value="+" class="add-item">
-            <br>
-            <button id="addToCart" data-item_price={{price}}>Add To Cart</button>
+              <br>
+              <button id="addToCart" data-item_price={{price}}>Add To Cart</button>
             </div>
           </div>
         </div>
       </div>
       {{/each}}
+    </div>
+  </div>
+</div>

@@ -145,13 +145,13 @@ h3 {
     //   background-color: #FFCAC3;
     //   *background-color: #003bb3;
     // }
-    //  .btn1 {
-    //    width: 260px;
-    //  }
+     .btn1 {
+       width: 260px;
+     }
 
-    // .btn2 {
-    //   width: 340px;
-    // }
+    .btn2 {
+      width: 340px;
+    }
 
     // .btn3 , .btn4  {
     //  background-color: gray;
@@ -214,6 +214,9 @@ h3 {
      .quantity.buttons_added .add-item:focus {
       outline: none; }
      
+      .product-counter {
+        display: inline;
+      }
 
      
 
