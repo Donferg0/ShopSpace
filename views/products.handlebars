@@ -42,35 +42,6 @@
       </div>
     </div>
 
-    {{!-- <div class="container-fluid">
-        <div class="col">
-          <a class="nav-link" href="/api/items/home">Home<span class="sr-only">(current)</span></a>
-        </div>
-        <div class="col">
-          <a class="nav-link" href="/api/items/clothing">Clothing</a>
-        </div>
-        <div class="col">
-          <a href="/#"><img src="/images/design4.png" class="logo" alt="..."></a>
-        </div> --}}
-    {{!-- <div class="col">
-            <h1>ShopSpace</h1>
-        </div> --}}
-    {{!-- <div class="col">
-          <a class="nav-link" href="/api/items/beauty">Beauty</a>
-        </div>
-        <div class="col">
-          <a class="nav-link" href="/api/items/accessories">Accessories</a>
-        </div>
-        <div class="col">
-          <a href="/login"><button class="btn btn-sm btn-primary btn3"><span></span>Login</button></a> |
-
-          <button type='Submission' class="btn btn-sm btn-primary btn4 goToCart"><span
-              class="fa fa-shopping-cart"></span></button>
-        </div> --}}
-
-
-    {{!-- </div> --}}
-
   </nav>
 
 
@@ -81,8 +52,8 @@
       {{#each product}}
       <div class="col-4">
         <div class="card" style="width: 18rem; margin: 5px 0 5px 0;">
-          <img src="{{img}}" class="card-img-top" alt="{{img}}">
-          <div class="card-body">
+          <img src="{{img}}" class="card-img-top" style="height: 280; width:286;" alt="{{img}}">
+          <div class="card-body" style="width: 18rem; margin: 5px 0 5px 0;">
             <p><span id="itemName"></span>Name: <span id='name2grab'>{{name}}</span></p>
             <p><span id="itemPrice"></span>Price: ${{price}}</p>
             <p><span id="quantity"></span>Quantity Available: {{quantity}}</p>
@@ -93,7 +64,7 @@
               <h1 class="product-counter" id={{name}}>0</h1>
               <input data-name={{name}} type="button" value="+" class="add-item">
               <br>
-              <button id="addToCart" data-item_price={{price}}>Add To Cart</button>
+              <button id="addToCart" class="btn btn-sm btn-primary" data-item_price={{price}}>Add To Cart</button>
             </div>
           </div>
         </div>
