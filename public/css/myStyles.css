@@ -131,7 +131,10 @@ h3 {
   background-color: #eeeeee;
   border: 1px solid #efefef;
   cursor: pointer;
-  width: 40px; }
+  width: 40px; 
+  color: black;
+}
+  
 
 .quantity.buttons_added .subtract-item {
   border-right: 0; }
@@ -160,3 +163,12 @@ h3 {
   .quantity {
     display: block;
   }
+
+  .btn1 {
+    width: 260px;
+  }
+
+ .btn2 {
+   width: 340px;
+ }
+  
