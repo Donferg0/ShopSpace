@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
   //create global shopping cart variable to store items
   //must JSON.parse item from local storage because it was stored as a string in order to be functional
   var shoppingCart = JSON.parse(localStorage.getItem('shoppingCart')) || {};
@@ -25,7 +26,7 @@ $(document).ready(function () {
     //must store object in local storage as a string for functionality
     localStorage.setItem('shoppingCart', JSON.stringify(shoppingCart))
     $("#shadow-cart").val(JSON.stringify(shoppingCart))
-    console.log($("#shadow-cart").val())
+    // console.log($("#shadow-cart").val())
 
     //Call your checkOut function from API and pass in your shopping cart.
     console.log(shoppingCart)

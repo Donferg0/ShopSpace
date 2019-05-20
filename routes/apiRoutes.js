@@ -48,7 +48,7 @@ module.exports = function(app) {
   app.post("/api/checkouts", function(req, res) {
     // var myCart = (JSON.parse(req.body))
     // console.log(myCart)
-    res.render("checkout")  
+    res.render("checkout", {layout: "checkout"})  
   })
 
   // Get route for returning items of a specific category
