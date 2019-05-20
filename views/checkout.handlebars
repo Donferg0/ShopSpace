@@ -109,6 +109,7 @@ span.price {
   }
 }
 </style>
+
 </head>
 
 <body>
@@ -117,7 +118,10 @@ span.price {
 <div class="row">
   <div class="col-75">
     <div class="container">
-      <form action="/action_page.php">
+     <form action="orderPlaced" action="GET">
+
+
+
       
         <div class="row">
           <div class="col-50">
@@ -176,18 +180,18 @@ span.price {
         </label>
         <input type="submit" value="Checkout" class="btn">
         <br>
-        <input type="submit" value="Keep Shopping" class="btn">
+        <input type="submit" value="Keep Shopping" class="btn" id="keepshopping">
       </form>
     </div>
   </div>
   <div class="col-25">
     <div class="container">
-      <h4>Cart <span class="price" id='cart-count' style="color:black"><i class="fa fa-shopping-cart"></i></span></h4>
+      <h4>Cart <span id='cart-count' style="color:black"><i class="fa fa-shopping-cart"></i></span></h4>
       <div id='dream-catcher'>
         {{!-- items should append --}}
       </div>
       <hr>
-      <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
+      <p>Total: <span class="price" style="color:black"><b></b></span></p>
     </div>
   </div>
 </div>

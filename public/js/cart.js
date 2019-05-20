@@ -41,4 +41,9 @@ $(document).ready(function() {
     console.log(myCart)
     goToCart(myCart)
   })
+
+  $("#keepshopping").on("click", function (event) {
+    event.preventDefault();
+    window.location.replace("/");
+  })
 })

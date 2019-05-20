@@ -90,11 +90,16 @@ module.exports = function (app) {
 
   app.get("/checkout", function (req, res) {
     if (req.session.isAuthenticated) {
-      res.render("checkout");
+      res.render("checkout", {layout: "checkout"});
     } else {
       res.render("signup");
     }
   });
+
+  app.get("/orderPlaced", function (req, res) {
+      res.render("orderPlaced", {layout: "checkout"});
+    } 
+  );
 
       // Render 404 page for any unmatched routes
   app.get("*", function (req, res) {
